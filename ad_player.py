@@ -20,6 +20,9 @@ def displayThanks(channel):
 	image=Image.open(os.path.join(path, 'Thankyou.jpg'))
 	image.show()
 	time.sleep(5)
+	#Do the printer job over here
+	count = count++ #Incrementing the counter
+	count = 0 #To check how many bottles may be... 
 
 while(1):
  for infile in glob.glob(os.path.join(path, '*.mp4')):
