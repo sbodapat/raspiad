@@ -1,0 +1,5 @@
+- The basic_player.py file in the branch is to test out the basic functionality of the thought that we had. It is the file that is used to loop only the video and do nothing else.
+- The ad_player.py file will have all the requrired functionality that is to be delivered to the customer and we must be editing the same file.
+- The testing should be through and we mut not leave any gap for any bugs.
+- As of today (14th of April) I was able to integrate the printer into the code, but got to test it. I think we must give it a through test and make sure everything works as planned.
+- Customer has asked for touch screen and to make it more interactive, we need to focus on that as well.
