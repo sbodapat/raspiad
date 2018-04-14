@@ -20,12 +20,11 @@ def displayThanks(channel):
 	image=Image.open(os.path.join(path, 'Thankyou.jpg'))
 	image.show()
 	time.sleep(5)
-	#Do the printer job over here
-	count = count++ #Incrementing the counter
-	count = 0 #To check how many bottles may be... 
+	#Do the printer job over here.
+	#Print job command starts over here.
+	os.startfile("print.docx","print")
 
 while(1):
- for infile in glob.glob(os.path.join(path, '*.mp4')):
-  a = subprocess.call( [ "omxplayer", "-o", "hdmi", infile])
-  GPIO.add_event_detect(7, GPIO.RISING, callback=displayThanks, bouncetime=5)
-  
+	for infile in glob.glob(os.path.join(path, '*.mp4')):
+	  a = subprocess.call( [ "omxplayer", "-o", "hdmi", infile])
+	  GPIO.add_event_detect(7, GPIO.RISING, callback=displayThanks, bouncetime=5)
