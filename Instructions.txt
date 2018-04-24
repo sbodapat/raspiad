@@ -3,3 +3,4 @@
 - The testing should be through and we mut not leave any gap for any bugs.
 - As of today (14th of April) I was able to integrate the printer into the code, but got to test it. I think we must give it a through test and make sure everything works as planned.
 - Customer has asked for touch screen and to make it more interactive, we need to focus on that as well.
+- Port 17 is pin 11 on the board and to be grounded at pin 14.
