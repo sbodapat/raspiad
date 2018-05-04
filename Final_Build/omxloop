@@ -1,20 +1,23 @@
 #!/usr/bin/python
+
 import RPi.GPIO as GPIO
 import sys
 import subprocess
 import os
 import glob
 import time
-import Image
+#import image
 
 GPIO.setmode(GPIO.BOARD)
 
 # GPIO 17 is set up as input, pulled up to avoid false detection.
 # The Port is wired to connect to GND on button press.  
 # So we'll be setting up falling edge detection
-GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(7, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 path ='/media/usb/'
+imgpath = '/media/usb/Thank_You.jpg'
+#imgfile in glob.glob(os.path.join(path, 'Thank_You.jpg'))
 
 def displayThanks(channel):
 	print("Event change detected.")
@@ -29,6 +32,8 @@ def displayThanks(channel):
 	#os.startfile("print.docx","print")
 
 while(1):
-	for infile in glob.glob(os.path.join(path, '*.mp4')):
-		a = subprocess.call( [ "omxplayer", "-o", "hdmi", infile])
-		GPIO.add_event_detect(17, GPIO.FALLING, callback=displayThanks, bouncetime=350)
+        for infile in glob.glob(os.path.join(path, '*.mp4')):
+			a = subprocess.call( [ "clear" ] )
+			a = subprocess.call( [ "omxplayer", "--live", "--aspect-mode", "fill", "-o", "hdmi", infile, "-b" ] )
+            #GPIO.add_event_detect(7, GPIO.RISING, callback=displayThanks, bouncetime=350)
+
