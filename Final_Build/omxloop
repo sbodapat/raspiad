@@ -29,7 +29,8 @@ def displayThanks(channel):
 	raw_input("Enter your number from the keypad\n>")
 	#Do the printer job over here.
 	#Print job command starts over here.
-	#os.startfile("print.docx","print")
+	#The printer should be replaced with the actual printer name.
+	a = subprocess.call( [ "lp", "-d", "printer", "/home/pi/omxloop" ] )
 
 while(1):
         for infile in glob.glob(os.path.join(path, '*.mp4')):
