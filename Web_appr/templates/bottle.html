@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Please Enter your mobile number:</h1><br>
+    <form id="MyForm"  action="{{url_for('submit')}}" method="get">
+      <input type="text" name="mobile" value="" autofocus  >
+    </form>
+
+  </body>
+  <script>
+  var time=1;
+  var auto_refresh = setTimeout(
+  function()
+  {
+  submitform();
+}, time*1000*30);
+  function submitform()
+  {
+    window.location.href = "/";
+  }
+  </script>
+</html>
