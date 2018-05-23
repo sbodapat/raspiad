@@ -10,3 +10,6 @@
 - Follow INSTALL.txt in the folder.
 - You can skip the use of make check, that'll ease the process. 
 - It's the CUPS driver.
+
+- You need to have python script running in the back-end and as well chrome browser to open up and start running.
+- https://peter.sh/experiments/chromium-command-line-switches/#start-fullscreen
